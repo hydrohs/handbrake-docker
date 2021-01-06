@@ -1,0 +1,9 @@
+#!/usr/bin/with-contenv sh
+COMMON_ARGS="--config /config"
+
+cd /storage
+if [ "${HANDBRAKE_DEBUG:-0}" -eq 1 ]; then
+  su-exec "${UNAME}" /usr/bin/ghb $COMMON_ARGS --debug >> /config/log/hb/handbrake.debug.log
+else
+  su-exec "${UNAME}" /usr/bin/ghb $COMMON_ARGS
+fi

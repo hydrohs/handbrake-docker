@@ -1,0 +1,22 @@
+version: '3'
+
+services:
+  xpra-base: 
+    build: .
+    ports:
+      - "2200:22"
+      - "10000:10000"
+    volumes:
+      - ~/.ssh/authorized_keys:/authorized_keys:ro
+      - config:/config
+      - storage:/storage
+      - output:/output
+      - watch:/watch
+    env_file:
+      - .env
+
+volumes:
+  config:
+  storage:
+  output:
+  watch:
