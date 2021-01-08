@@ -1,22 +1,19 @@
 version: '3'
 
 services:
-  xpra-base: 
+  handbrake: 
     build: .
     ports:
-      - "2200:22"
-      - "10000:10000"
+      - "2201:22"
+      - "10001:10000"
     volumes:
       - ~/.ssh/authorized_keys:/authorized_keys:ro
       - config:/config
-      - storage:/storage
-      - output:/output
-      - watch:/watch
+      - /data/hydrohs:/storage
+      - /data/hydrohs/ripped/complete:/output
+      - /data/hydrohs/ripped/watch:/watch
     env_file:
       - .env
 
 volumes:
   config:
-  storage:
-  output:
-  watch:
