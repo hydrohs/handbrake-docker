@@ -5,7 +5,7 @@
 #
 
 # Pull base image.
-FROM xpra-base_xpra-base
+FROM hydrohs/xpra-base 
 
 # Define software versions.
 # NOTE: x264 version 20171224 is the most recent one that doesn't crash.
