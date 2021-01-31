@@ -14,6 +14,7 @@ services:
       - /data/hydrohs/ripped/watch:/watch
     env_file:
       - .env
+    restart: unless-stopped
 
 volumes:
   config:
