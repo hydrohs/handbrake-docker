@@ -1,5 +1,5 @@
 # Docker container for HandBrake
-This is a Docker container for [HandBrake](https://handbrake.fr/).
+This is a Docker container for [HandBrake](https://handbrake.fr/). Based on this [container](https://github.com/jlesage/docker-handbrake).
 
 The GUI of the application is accessed through a modern web browser (no installation or configuration needed on the client side) or via ssh using [Xpra](https://xpra.org).
 

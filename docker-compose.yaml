@@ -9,9 +9,9 @@ services:
     volumes:
       - ~/.ssh/authorized_keys:/authorized_keys:ro
       - config:/config
-      - /data/hydrohs:/storage
-      - /data/hydrohs/ripped/complete:/output
-      - /data/hydrohs/ripped/watch:/watch
+      - /storage:/storage
+      - /output:/output
+      - /watch:/watch
     env_file:
       - .env
     restart: unless-stopped
